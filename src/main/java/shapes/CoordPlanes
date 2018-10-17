@@ -1,0 +1,5 @@
+package shapes;
+
+enum CoordPlane{
+    OXY,OXZ,OYZ
+}
