@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SphereParser {
 
-    public List<Double> parseSpheres(List<String> lines){
+    public List<Double> parseSpheres(List<String> lines,Validator<String> validator){
         List<Double> spheres = new ArrayList<Double>();
         for(String line:lines){
             String[] lineArray = line.split("\\s+");
