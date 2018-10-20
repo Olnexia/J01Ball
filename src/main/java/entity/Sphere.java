@@ -1,30 +1,27 @@
 package entity;
 
 public class Sphere {
-    private double xCoordinate;
-    private double yCoordinate;
-    private double zCoordinate;
-    private double radius;
+    private final Point center;
+    private final double radius;
 
     public Sphere(double radius, double xCoordinate, double yCoordinate, double zCoordinate) {
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
-        this.zCoordinate = zCoordinate;
+        center = new Point(xCoordinate,yCoordinate,zCoordinate);
         this.radius = radius;
     }
 
     public double getXCoordinate() {
 
-        return xCoordinate;
+        return center.getXCoordinate();
     }
 
     public double getYCoordinate() {
 
-        return yCoordinate;
+        return center.getYCoordinate();
     }
 
     public double getZCoordinate() {
-        return zCoordinate;
+
+        return center.getZCoordinate();
     }
 
     public double getRadius() {
@@ -34,40 +31,36 @@ public class Sphere {
 
     @Override
     public int hashCode() {
-        int result =14;
-        result = 41 * result + (int)radius;
-        result = 31 * result + (int)xCoordinate;
-        result = 21 * result + (int)yCoordinate;
-        result = 11 * result + (int)zCoordinate;
+        int result =17;
+        final int prime = 31;
+        result = prime * result + Double.valueOf(getRadius()).hashCode();
+        result = prime * result + Double.valueOf(getXCoordinate()).hashCode();
+        result = prime * result + Double.valueOf(getYCoordinate()).hashCode();
+        result = prime * result + Double.valueOf(getZCoordinate()).hashCode();
         return  result;
     }
 
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("Center at ["+xCoordinate);
-        sb.append(";"+yCoordinate);
-        sb.append(";"+zCoordinate);
-        sb.append("] radius: "+radius);
+        sb.append("Center: "+center.toString());
+        sb.append(" radius: "+radius);
         return sb.toString();
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if(obj == null ){
-            return false;
-        }
-        if(!(obj instanceof Sphere)){
-            return false;
-        }
-        if(obj==this){
+    public boolean equals(Object o) {
+        if (this == o) {
             return true;
         }
-        Sphere sphere = (Sphere)obj;
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Sphere sphere = (Sphere) o;
 
-        return Double.compare(sphere.xCoordinate, xCoordinate) == 0 &&
-                Double.compare(sphere.yCoordinate, yCoordinate) == 0 &&
-                Double.compare(sphere.zCoordinate, zCoordinate) == 0 &&
-                Double.compare(sphere.radius, radius) == 0;
+        return  Double.compare(sphere.getRadius(), getRadius()) == 0 &&
+                Double.compare(sphere.getXCoordinate(),getXCoordinate()) == 0 &&
+                Double.compare(sphere.getYCoordinate(),getYCoordinate()) == 0 &&
+                Double.compare(sphere.getZCoordinate(),getZCoordinate()) == 0;
     }
 }

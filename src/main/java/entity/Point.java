@@ -1,9 +1,9 @@
 package entity;
 
 public class Point {
-    private double xCoordinate;
-    private double yCoordinate;
-    private double zCoordinate;
+    private final double xCoordinate;
+    private final double yCoordinate;
+    private final double zCoordinate;
 
     public Point(double xCoordinate, double yCoordinate, double zCoordinate) {
         this.xCoordinate = xCoordinate;
@@ -28,17 +28,18 @@ public class Point {
 
     @Override
     public int hashCode() {
-        int result =14;
-        result = 31 * result + (int)xCoordinate;
-        result = 21 * result + (int)yCoordinate;
-        result = 11 * result + (int)zCoordinate;
+        int result =17;
+        final int prime = 31;
+        result = prime * result + Double.valueOf(getXCoordinate()).hashCode();
+        result = prime * result + Double.valueOf(getYCoordinate()).hashCode();
+        result = prime * result + Double.valueOf(getZCoordinate()).hashCode();
         return  result;
     }
 
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("Point at ["+xCoordinate);
+        sb.append("point ["+xCoordinate);
         sb.append(";"+yCoordinate);
         sb.append(";"+zCoordinate);
         sb.append("]");
@@ -46,20 +47,17 @@ public class Point {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if(obj == null ){
-            return false;
-        }
-        if(!(obj instanceof Sphere)){
-            return false;
-        }
-        if(obj==this){
+    public boolean equals(Object o) {
+        if (this == o) {
             return true;
         }
-        Point point = (Point)obj;
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Point point = (Point)o;
 
-        return Double.compare(xCoordinate, xCoordinate) == 0 &&
-                Double.compare(yCoordinate, yCoordinate) == 0 &&
-                Double.compare(zCoordinate, zCoordinate) == 0;
+        return Double.compare(point.xCoordinate, xCoordinate) == 0 &&
+                Double.compare(point.yCoordinate, yCoordinate) == 0 &&
+                Double.compare(point.zCoordinate, zCoordinate) == 0;
     }
 }
