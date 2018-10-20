@@ -1,16 +1,14 @@
-package geometry;
+package entity;
 
-public class Ball {
+public class Point {
     private double xCoordinate;
     private double yCoordinate;
     private double zCoordinate;
-    private double radius;
 
-    public Ball(double radius, double xCoordinate, double yCoordinate, double zCoordinate) {
+    public Point(double xCoordinate, double yCoordinate, double zCoordinate) {
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
         this.zCoordinate = zCoordinate;
-        this.radius = radius;
     }
 
     public double getXCoordinate() {
@@ -24,18 +22,13 @@ public class Ball {
     }
 
     public double getZCoordinate() {
+
         return zCoordinate;
-    }
-
-    public double getRadius() {
-
-        return radius;
     }
 
     @Override
     public int hashCode() {
         int result =14;
-        result = 41 * result + (int)radius;
         result = 31 * result + (int)xCoordinate;
         result = 21 * result + (int)yCoordinate;
         result = 11 * result + (int)zCoordinate;
@@ -45,10 +38,10 @@ public class Ball {
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("Center at ["+xCoordinate);
+        sb.append("Point at ["+xCoordinate);
         sb.append(";"+yCoordinate);
         sb.append(";"+zCoordinate);
-        sb.append("] radius: "+radius);
+        sb.append("]");
         return sb.toString();
     }
 
@@ -57,17 +50,16 @@ public class Ball {
         if(obj == null ){
             return false;
         }
-        if(!(obj instanceof Ball)){
+        if(!(obj instanceof Sphere)){
             return false;
         }
         if(obj==this){
             return true;
         }
-        Ball ball = (Ball)obj;
+        Point point = (Point)obj;
 
-        return Double.compare(ball.xCoordinate, xCoordinate) == 0 &&
-                Double.compare(ball.yCoordinate, yCoordinate) == 0 &&
-                Double.compare(ball.zCoordinate, zCoordinate) == 0 &&
-                Double.compare(ball.radius, radius) == 0;
+        return Double.compare(xCoordinate, xCoordinate) == 0 &&
+                Double.compare(yCoordinate, yCoordinate) == 0 &&
+                Double.compare(zCoordinate, zCoordinate) == 0;
     }
 }

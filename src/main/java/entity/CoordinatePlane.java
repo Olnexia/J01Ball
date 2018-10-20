@@ -1,4 +1,4 @@
-package geometry;
+package entity;
 
 public enum CoordinatePlane {
     OXY,

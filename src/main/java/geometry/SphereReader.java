@@ -6,9 +6,9 @@ import java.util.List;
 
 //TODO Change logics: validator as a param
 
-public class  BallReader {
+public class SphereReader {
 
-    public List<String> readBalls(String filePath){
+    public List<String> readLines(String filePath){
         File file = new File(filePath);
         FileInputStream fileStream = null;
         List<String> lines = new ArrayList<String>();
