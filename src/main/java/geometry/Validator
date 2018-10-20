@@ -1,7 +1,5 @@
 package geometry;
 
-import java.util.List;
-
 public interface Validator<T>{
-    boolean validate(List<T> objList);
+    boolean validate(T obj);
 }

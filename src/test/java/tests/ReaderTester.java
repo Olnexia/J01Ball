@@ -7,6 +7,7 @@ import geometry.SphereReader;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ReaderTester {
 
@@ -20,9 +21,8 @@ public class ReaderTester {
     @Test
     public void ShouldReturnTestArrayWhenFileIsTestInput(){
         //given
-
         //when
-        ArrayList<String> res = READER.readBalls("src/test/resources/testInput.txt");
+        List<String> res = READER.readLines("src/test/resources/testInput.txt");
         //then
         assertArrayEquals(TEST_STR_ARRAY,res.toArray());
     }
@@ -32,7 +32,7 @@ public class ReaderTester {
         //given
 
         //when
-        ArrayList<String> res = READER.readBalls("src/test/resources/wrTestInput.txt");
+        List<String> res = READER.readLines("src/test/resources/wrTestInput.txt");
         //then
         assertNull(res);
     }
@@ -40,10 +40,8 @@ public class ReaderTester {
     @Test
     public void ShouldReturnTestBallArrayWhenParsingFromTestStrArray(){
         //given
-        ArrayList<String> input = new ArrayList<String>(Arrays.asList(TEST_STR_ARRAY));
         //when
-        ArrayList<Sphere> res = PARSER.parseBalls(input);
         //then
-        assertArrayEquals(TEST_SPHERE_ARRAY,res.toArray());
+
     }
 }

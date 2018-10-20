@@ -5,16 +5,28 @@ import java.util.List;
 
 public class SphereParser {
 
-    public List<Double> parseSpheres(List<String> lines,Validator<String> validator){
-        List<Double> spheres = new ArrayList<Double>();
+    public List<double[]> parseSpheres(List<String> lines, Validator<String> validator){
+        List<double[]> validSphereData = new ArrayList<>();
         for(String line:lines){
-            String[] lineArray = line.split("\\s+");
-            spheres.add(Double.parseDouble(lineArray[0]));
-            spheres.add(Double.parseDouble(lineArray[1]));
-            spheres.add(Double.parseDouble(lineArray[2]));
-            spheres.add(Double.parseDouble(lineArray[3]));
+            double[] sphereData = parseSphere(line,validator);
+            if(sphereData!=null){
+                validSphereData.add(sphereData);
+            }
         }
-        return spheres;
+        return validSphereData;
     }
 
+    private double[] parseSphere(String line,Validator validator){
+        double[] validSphereData=null;
+        if(validator.validate(line)){
+            validSphereData = new double[3];
+            String[] lineArray = line.split("\\s+");
+            for( int i=0;i<3;i++){
+                validSphereData[i]=Double.parseDouble(lineArray[i]);
+            }
+        } else{
+            //logging
+        }
+        return validSphereData;
+    }
 }

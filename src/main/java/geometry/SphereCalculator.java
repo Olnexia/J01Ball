@@ -5,28 +5,35 @@ import entity.CoordinatePlane;
 
 public class SphereCalculator {
 
-    public double getSurfaceArea(Sphere sphere){
+    public double calculateSurfaceArea(Sphere sphere){
         double radius = sphere.getRadius();
         return 4 * Math.PI * radius * radius;
     }
 
-    public double getVolume(Sphere sphere){
+    public double calculateVolume(Sphere sphere){
         double radius = sphere.getRadius();
         return (4.0 / 3.0) * Math.PI * radius * radius * radius;
     }
 
-    public double getVolumeRatio(Sphere sphere, CoordinatePlane plane){
+    public double calculateVolumeRatio(Sphere sphere, CoordinatePlane plane){
+        if(!isTouchedByPlane(sphere)){
+            return 0.0;
+        }
+        double distanceToPlane;
         double segmentHeight =0;
         double radius = sphere.getRadius();
         switch(plane){
             case OXY:
-                segmentHeight=sphere.getZCoordinate()+radius;
+                distanceToPlane = Math.abs(sphere.getZCoordinate());
+                segmentHeight=radius-distanceToPlane;
                 break;
             case OXZ:
-                segmentHeight=sphere.getYCoordinate()+radius;
+                distanceToPlane = Math.abs(sphere.getYCoordinate());
+                segmentHeight=radius-distanceToPlane;
                 break;
             case OYZ:
-                segmentHeight=sphere.getXCoordinate()+radius;
+                distanceToPlane = Math.abs(sphere.getXCoordinate());
+                segmentHeight=radius-distanceToPlane;
                 break;
             default:
                 //Add an exception
@@ -37,12 +44,8 @@ public class SphereCalculator {
         if(segmentVolume==0){
             return 0.0;
         }else{
-            return segmentVolume / (getVolume(sphere) - segmentVolume);
+            return segmentVolume / (calculateVolume(sphere) - segmentVolume);
         }
-    }
-
-    public boolean isSphere(double[] parsedNumbers){
-        return parsedNumbers[0]>0;
     }
 
     public boolean isTouchedByPlane(Sphere sphere){
