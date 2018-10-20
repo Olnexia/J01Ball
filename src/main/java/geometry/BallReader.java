@@ -2,26 +2,24 @@ package geometry;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
-public class BallReader {
+//TODO Change logics: validator as a param
 
-    public ArrayList<String> readBalls(String filePath){
+public class  BallReader {
+
+    public List<String> readBalls(String filePath){
         File file = new File(filePath);
         FileInputStream fileStream = null;
-        ArrayList<String> validLines=null;
+        List<String> lines = new ArrayList<String>();
         BufferedReader reader;
         try{
             fileStream = new FileInputStream(file);
             reader = new BufferedReader(new InputStreamReader(fileStream));
 
-            BallValidator validator=new BallValidator();
             String tempLine = reader.readLine();
-            validLines=new ArrayList<String>();
             while(tempLine!=null){
-                if(validator.validateBall(tempLine)) {
-                    validLines.add(tempLine);
-                }
-                tempLine = reader.readLine();
+                lines.add(tempLine);
             }
         }catch (IOException e){
 
@@ -34,6 +32,6 @@ public class BallReader {
 
             }
         }
-        return (validLines.isEmpty()) ? null : validLines;
+        return  lines;
     }
 }

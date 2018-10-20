@@ -1,6 +1,6 @@
 package tests;
 
-import static org.junit.Assert.*;
+import  static org.junit.Assert.*;
 import geometry.Ball;
 import geometry.BallParser;
 import geometry.BallReader;
@@ -22,17 +22,17 @@ public class ReaderTester {
         //given
 
         //when
-        ArrayList<String> res = READER.readBalls("E:\\Some Code\\Java\\Epam courses\\T1Ball\\src\\test\\resources\\testInput.txt");
+        ArrayList<String> res = READER.readBalls("src/test/resources/testInput.txt");
         //then
         assertArrayEquals(TEST_STR_ARRAY,res.toArray());
     }
 
     @Test
-    public void ShouldReturnNullWhenFileIsWrongTestInput(){
+    public void ShouldReturnNullWhenFileHasNotValidLines(){
         //given
 
         //when
-        ArrayList<String> res = READER.readBalls("E:\\Some Code\\Java\\Epam courses\\T1Ball\\src\\test\\resources\\wrTestInput.txt");
+        ArrayList<String> res = READER.readBalls("src/test/resources/wrTestInput.txt");
         //then
         assertNull(res);
     }
