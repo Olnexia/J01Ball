@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class CalculatorTester {
     private final SphereCalculator CALC = new SphereCalculator();
-    private final Sphere TEST_SPHERE = new Sphere(5,3,2,4);
+    private final Sphere TEST_SPHERE = new Sphere(5,3,2,0);
 
     @Test
     public void ShouldReturnThreeHFourteenWhenRadiusFive(){

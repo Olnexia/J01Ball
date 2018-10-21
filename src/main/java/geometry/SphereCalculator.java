@@ -39,7 +39,6 @@ public class SphereCalculator {
                 //Add an exception
                 break;
         }
-        //FIXME
         double segmentVolume = Math.PI * segmentHeight*segmentHeight * (radius - ((1.0 / 3.0) * segmentHeight));
         if(segmentVolume==0){
             return 0.0;

@@ -9,11 +9,9 @@ public class SphereValidator implements Validator<String>
     private Pattern pattern;
     private Matcher matcher;
 
-    @Override
     public boolean validate(final String sphereLine){
         pattern=Pattern.compile(SPHERE_PATTERN);
         matcher = pattern.matcher(sphereLine);
         return matcher.matches();
     }
-
 }

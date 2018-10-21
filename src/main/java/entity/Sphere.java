@@ -10,22 +10,18 @@ public class Sphere {
     }
 
     public double getXCoordinate() {
-
         return center.getXCoordinate();
     }
 
     public double getYCoordinate() {
-
         return center.getYCoordinate();
     }
 
     public double getZCoordinate() {
-
         return center.getZCoordinate();
     }
 
     public double getRadius() {
-
         return radius;
     }
 
