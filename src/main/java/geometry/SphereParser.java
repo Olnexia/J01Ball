@@ -1,7 +1,6 @@
 package geometry;
 
-import exceptions.ParseSphereException;
-
+import exceptions.SphereParsingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,21 +13,21 @@ public class SphereParser {
                 double[] sphereData = parseSphere(line, validator);
                 validSphereData.add(sphereData);
             }
-            catch (ParseSphereException e){
+            catch (SphereParsingException e){
 
             }
         }
         return validSphereData;
     }
 
-    public double[] parseSphere(String line,Validator<String> validator) throws ParseSphereException {
+    public double[] parseSphere(String line,Validator<String> validator) throws SphereParsingException {
         if (!validator.validate(line)) {
-            throw new ParseSphereException("Line can't be parsed to sphere data",line);
+            throw new SphereParsingException("Line can't be parsed to sphere data",line);
         }
 
         double[] validSphereData = new double[4];
         String[] lineArray = line.split("\\s+");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             validSphereData[i] = Double.parseDouble(lineArray[i]);
         }
         return validSphereData;

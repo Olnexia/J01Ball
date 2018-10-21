@@ -2,24 +2,22 @@ package tests;
 
 import entity.Sphere;
 import entity.CoordinatePlane;
-
 import static org.junit.Assert.*;
-
 import geometry.SphereCalculator;
 import org.junit.Test;
 
 public class CalculatorTester {
     private final SphereCalculator CALC = new SphereCalculator();
-    private final Sphere TEST_SPHERE = new Sphere(5,3,2,0);
+    private final Sphere TEST_SPHERE = new Sphere(5,3,2,1);
 
     @Test
     public void ShouldReturnThreeHFourteenWhenRadiusFive(){
         //given
 
         //when
-        double res = CALC.calculateSurfaceArea(TEST_SPHERE);
+        double actualArea = CALC.calculateSurfaceArea(TEST_SPHERE);
         //then
-        assertEquals(314.159,res,0.001);
+        assertEquals(314.159,actualArea,0.001);
     }
 
     @Test
@@ -27,9 +25,9 @@ public class CalculatorTester {
         //given
 
         //when
-        double res = CALC.calculateVolume(TEST_SPHERE);
+        double actualVolume = CALC.calculateVolume(TEST_SPHERE);
         //then
-        assertEquals(523.598,res,0.001);
+        assertEquals(523.598,actualVolume,0.001);
     }
 
     @Test
@@ -37,8 +35,8 @@ public class CalculatorTester {
         //give
 
         //when
-        double res = CALC.calculateVolumeRatio(TEST_SPHERE, CoordinatePlane.OXY);
+        double actualRatio = CALC.calculateVolumeRatio(TEST_SPHERE, CoordinatePlane.OXY);
         //then
-        assertEquals(0.544,res,0.001);
+        assertEquals(0.544,actualRatio,0.001);
     }
 }
