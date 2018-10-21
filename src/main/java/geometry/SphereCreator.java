@@ -8,7 +8,7 @@ import java.util.List;
 
 public class SphereCreator {
     public List<Sphere> createSpheres(List<double[]> sphereDataList){
-        List<Sphere> sphereList = new ArrayList<>();
+        List<Sphere> sphereList = new ArrayList<Sphere>();
         for(double[] sphereData : sphereDataList) {
             try {
                 sphereList.add(createSphere(sphereData));
