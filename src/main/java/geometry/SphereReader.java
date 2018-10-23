@@ -5,10 +5,11 @@ import exceptions.InputFileNotFoundException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.*;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class SphereReader {
-    private static Logger logger = Logger.getLogger(SphereReader.class.getName());
+    private static Logger logger = LogManager.getLogger(SphereReader.class);
 
     public List<String> readLines(String filePath) throws InputFileNotFoundException, FileReadingException {
         List<String> lines = new ArrayList<>();

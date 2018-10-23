@@ -1,13 +1,14 @@
 package geometry;
 
-import org.apache.log4j.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class SphereValidator implements Validator<String>
 {
     private static final String SPHERE_PATTERN="^[0-9]\\.[0-9]\\s+\\-?[0-9]\\.[0-9]\\s+\\-?[0-9]\\.[0-9]\\s+\\-?[0-9]\\.[0-9]";
-    private static Logger logger = Logger.getLogger(SphereReader.class.getName());
+    private static Logger logger = LogManager.getLogger(SphereValidator.class);
     private Pattern pattern;
     private Matcher matcher;
 

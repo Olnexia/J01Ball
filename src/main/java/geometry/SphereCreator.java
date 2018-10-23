@@ -2,13 +2,13 @@ package geometry;
 
 import entity.Sphere;
 import exceptions.SphereCreatingException;
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class SphereCreator {
-    private static Logger logger = Logger.getLogger(SphereParser.class.getName());
+    private static Logger logger = LogManager.getLogger(SphereCreator.class);
 
     public List<Sphere> createSpheres(List<double[]> sphereDataList){
         List<Sphere> sphereList = new ArrayList<>();

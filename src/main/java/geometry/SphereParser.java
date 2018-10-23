@@ -1,12 +1,13 @@
 package geometry;
 
 import exceptions.SphereParsingException;
-import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class SphereParser {
-    private static Logger logger = Logger.getLogger(SphereParser.class.getName());
+    private static Logger logger = LogManager.getLogger(SphereParser.class);
 
     public List<double[]> parseSpheres(List<String> lines, Validator<String> validator){
         List<double[]> validSphereData = new ArrayList<>();
