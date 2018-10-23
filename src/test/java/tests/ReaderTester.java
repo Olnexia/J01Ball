@@ -1,15 +1,17 @@
 package tests;
 
 import  static org.junit.Assert.*;
+import org.apache.log4j.*;
 import geometry.SphereReader;
 import org.junit.Test;
-
 import java.util.List;
 
+
 public class ReaderTester {
-    private final static String TEST_PATH = "src/test/resources/testInput.txt";
-    private final static String NONEXISTENT_PATH = "src/test/resources/nonexistent.txt";
-    private final static SphereReader READER = new SphereReader();
+    private static final String TEST_PATH = "src/test/resources/testInput.txt";
+    private static final String NONEXISTENT_PATH = "src/test/resources/nonexistent.txt";
+    private static final SphereReader READER = new SphereReader();
+    private static final Logger LOGGER = Logger.getLogger(ReaderTester.class.getName());
 
     @Test
     public void ShouldReturnTestExpectedArrayWhenFileIsTestInput(){
@@ -24,6 +26,7 @@ public class ReaderTester {
             //then
             assertArrayEquals(testExpectedArray, actual.toArray());
         } catch (Exception e) {
+            LOGGER.error("An exception occurred while reading the file",e);
             fail();
         }
     }
@@ -38,6 +41,7 @@ public class ReaderTester {
         } catch (Exception expected){
             //then
             assertEquals("File not found",expected.getMessage());
+            LOGGER.error("An exception occurred while reading the file",expected);
         }
     }
 }

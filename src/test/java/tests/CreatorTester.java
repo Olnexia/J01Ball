@@ -3,15 +3,17 @@ package tests;
 import entity.Sphere;
 import exceptions.SphereCreatingException;
 import geometry.*;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.*;
 import static org.junit.Assert.fail;
-import static org.mockito.Mockito.*;
 
 public class CreatorTester {
     private final static SphereCreator CREATOR = new SphereCreator();
+    private static final Logger LOGGER = Logger.getLogger(ParserTester.class.getName());
+
 
     @Test
     public void ShouldReturnExpectedSphereWhenInputIsExpectedSphereData() {
@@ -24,6 +26,7 @@ public class CreatorTester {
             //then
             assertEquals(expectedSphere, actualSphere);
         } catch (SphereCreatingException e) {
+            LOGGER.warn("An exception occurred while creating the sphere",e);
             fail();
         }
     }
@@ -39,6 +42,7 @@ public class CreatorTester {
         } catch (Exception expected){
             //then
             assertEquals("Sphere can't have negative radius",expected.getMessage());
+            LOGGER.warn("An exception occurred while creating the sphere",expected);
         }
     }
 

@@ -1,11 +1,9 @@
 package tests;
 
 import static org.junit.Assert.*;
-
 import geometry.SphereValidator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
