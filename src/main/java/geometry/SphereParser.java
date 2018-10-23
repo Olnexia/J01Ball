@@ -7,6 +7,7 @@ import java.util.List;
 
 public class SphereParser {
     private static Logger logger = Logger.getLogger(SphereParser.class.getName());
+
     public List<double[]> parseSpheres(List<String> lines, Validator<String> validator){
         List<double[]> validSphereData = new ArrayList<>();
         for(String line:lines){
@@ -25,7 +26,6 @@ public class SphereParser {
         if (!validator.validate(line)) {
             throw new SphereParsingException("Line can't be parsed to sphere data",line);
         }
-
         double[] validSphereData = new double[4];
         String[] lineArray = line.split("\\s+");
         for (int i = 0; i < 4; i++) {

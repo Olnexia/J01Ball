@@ -39,7 +39,7 @@ public class Sphere {
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("Center: "+center.toString());
+        sb.append("Center: "+center);
         sb.append(" radius: "+radius);
         return sb.toString();
     }

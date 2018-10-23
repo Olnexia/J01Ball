@@ -2,7 +2,6 @@ package tests;
 
 import exceptions.SphereParsingException;
 import geometry.*;
-import org.apache.log4j.Logger;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +10,7 @@ import static org.junit.Assert.fail;
 import static org.mockito.Mockito.*;
 
 public class ParserTester {
-    private final static SphereParser PARSER = new SphereParser();
-    private static final Logger LOGGER = Logger.getLogger(ParserTester.class.getName());
+    private static final SphereParser PARSER = new SphereParser();
 
     @Test
     public void ShouldReturnExpectedSphereDataWhenInputIsExpectedStringData(){
@@ -27,7 +25,6 @@ public class ParserTester {
             //then
             assertArrayEquals(expectedSphereData, actualSphereData,0.001);
         } catch (SphereParsingException e) {
-             LOGGER.warn("An exception occurred while parsing the line",e);
             fail();
         }
     }

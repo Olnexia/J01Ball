@@ -8,10 +8,9 @@ import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 
-
 @RunWith(DataProviderRunner.class)
 public class ValidatorTester {
-    private final SphereValidator VALIDATOR = new SphereValidator();
+    private static final SphereValidator VALIDATOR = new SphereValidator();
 
     @DataProvider
     public static Object[][] dataValidatorAdd() {

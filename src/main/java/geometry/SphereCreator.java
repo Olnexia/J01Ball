@@ -9,6 +9,7 @@ import java.util.List;
 
 public class SphereCreator {
     private static Logger logger = Logger.getLogger(SphereParser.class.getName());
+
     public List<Sphere> createSpheres(List<double[]> sphereDataList){
         List<Sphere> sphereList = new ArrayList<>();
         for(double[] sphereData : sphereDataList) {

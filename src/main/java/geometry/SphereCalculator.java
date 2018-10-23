@@ -19,26 +19,20 @@ public class SphereCalculator {
         if(!isTouchedByPlane(sphere)){
             return 0.0;
         }
-        double distanceToPlane;
-        double segmentHeight =0;
+        double distanceToPlane=0;
         double radius = sphere.getRadius();
         switch(plane){
             case OXY:
                 distanceToPlane = Math.abs(sphere.getZCoordinate());
-                segmentHeight=radius-distanceToPlane;
                 break;
             case OXZ:
                 distanceToPlane = Math.abs(sphere.getYCoordinate());
-                segmentHeight=radius-distanceToPlane;
                 break;
             case OYZ:
                 distanceToPlane = Math.abs(sphere.getXCoordinate());
-                segmentHeight=radius-distanceToPlane;
-                break;
-            default:
-                //Add an exception
                 break;
         }
+        double segmentHeight=radius-distanceToPlane;
         double segmentVolume = Math.PI * segmentHeight*segmentHeight * (radius - ((1.0 / 3.0) * segmentHeight));
         if(segmentVolume==0){
             return 0.0;
