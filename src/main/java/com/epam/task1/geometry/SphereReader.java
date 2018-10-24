@@ -1,10 +1,11 @@
-package geometry;
+package com.epam.task1.geometry;
 
-import exceptions.FileReadingException;
-import exceptions.InputFileNotFoundException;
+import com.epam.task1.exceptions.FileReadingException;
+import com.epam.task1.exceptions.InputFileNotFoundException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 

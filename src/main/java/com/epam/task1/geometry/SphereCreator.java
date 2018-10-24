@@ -1,9 +1,10 @@
-package geometry;
+package com.epam.task1.geometry;
 
-import entity.Sphere;
-import exceptions.SphereCreatingException;
+import com.epam.task1.entity.Sphere;
+import com.epam.task1.exceptions.SphereCreatingException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 

@@ -1,7 +1,8 @@
 package tests;
 
-import exceptions.SphereParsingException;
-import geometry.*;
+import com.epam.task1.exceptions.SphereParsingException;
+import com.epam.task1.geometry.SphereParser;
+import com.epam.task1.geometry.SphereValidator;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;

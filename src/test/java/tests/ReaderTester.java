@@ -1,7 +1,7 @@
 package tests;
 
 import  static org.junit.Assert.*;
-import geometry.SphereReader;
+import com.epam.task1.geometry.SphereReader;
 import org.junit.Test;
 import java.util.List;
 

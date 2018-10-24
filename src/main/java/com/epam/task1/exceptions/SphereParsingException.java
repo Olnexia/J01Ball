@@ -1,4 +1,4 @@
-package exceptions;
+package com.epam.task1.exceptions;
 
 public class SphereParsingException extends Exception {
     private String wrongLine;

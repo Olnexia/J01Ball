@@ -1,4 +1,4 @@
-package geometry;
+package com.epam.task1.geometry;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

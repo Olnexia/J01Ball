@@ -1,8 +1,8 @@
 package tests;
 
-import entity.Sphere;
-import exceptions.SphereCreatingException;
-import geometry.*;
+import com.epam.task1.entity.Sphere;
+import com.epam.task1.exceptions.SphereCreatingException;
+import com.epam.task1.geometry.SphereCreator;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;

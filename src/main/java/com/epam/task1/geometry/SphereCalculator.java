@@ -1,7 +1,7 @@
-package geometry;
+package com.epam.task1.geometry;
 
-import entity.Sphere;
-import entity.CoordinatePlane;
+import com.epam.task1.CoordinatePlane;
+import com.epam.task1.entity.Sphere;
 
 public class SphereCalculator {
 

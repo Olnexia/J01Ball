@@ -1,4 +1,4 @@
-package entity;
+package com.epam.task1.entity;
 
 public class Point {
     private final double xCoordinate;

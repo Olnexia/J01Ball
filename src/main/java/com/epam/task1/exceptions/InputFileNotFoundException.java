@@ -1,4 +1,6 @@
-package exceptions;
+package com.epam.task1.exceptions;
+
+//TODO: don't use  wrongPath but use conc of the message and the path
 
 public class InputFileNotFoundException extends Exception {
     private String wrongPath;

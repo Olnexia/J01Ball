@@ -1,9 +1,9 @@
 package tests;
 
-import entity.Sphere;
-import entity.CoordinatePlane;
+import com.epam.task1.entity.Sphere;
+import com.epam.task1.CoordinatePlane;
 import static org.junit.Assert.*;
-import geometry.SphereCalculator;
+import com.epam.task1.geometry.SphereCalculator;
 import org.junit.Test;
 
 public class CalculatorTester {
