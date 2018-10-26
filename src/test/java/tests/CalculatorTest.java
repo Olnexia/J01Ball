@@ -8,11 +8,11 @@ import com.epam.task1.logics.calculator.SphereCalculator;
 import org.junit.Test;
 
 public class CalculatorTest {
-    private final Sphere TEST_SPHERE = new Sphere(5,new Point(3,2,1));
-    private final SphereCalculator calculator = new SphereCalculator();
+    private static final Sphere TEST_SPHERE = new Sphere(5,new Point(3,2,1));
+    private static final SphereCalculator calculator = new SphereCalculator();
 
     @Test
-    public void ShouldReturnThreeHFourteenWhenRadiusFive(){
+    public void shouldReturnThreeHFourteenWhenRadiusFive(){
         //given
 
         //when
@@ -22,7 +22,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void ShouldReturnFiveHTwentyThreeWhenRadiusFive(){
+    public void shouldReturnFiveHTwentyThreeWhenRadiusFive(){
         //given
 
         //when
@@ -32,7 +32,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void ShouldReturnZeroFiftyFourWhenRadiusFiveAndPlaneOXY(){
+    public void shouldReturnZeroFiftyFourWhenRadiusFiveAndPlaneOXY(){
         //give
 
         //when
