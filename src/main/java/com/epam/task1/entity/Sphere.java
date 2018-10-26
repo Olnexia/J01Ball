@@ -8,7 +8,6 @@ public class Sphere {
     public Sphere(double radius, Point center) {
         this.radius = radius;
         this.center = center;
-
     }
 
     public double getXCoordinate() {
@@ -24,6 +23,7 @@ public class Sphere {
     }
 
     public double getRadius() {
+
         return radius;
     }
 

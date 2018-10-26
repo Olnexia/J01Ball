@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class SphereRepository implements Repository<Sphere>{
-
     private Map<Long,Sphere> data = new HashMap<>();
 
     @Override
