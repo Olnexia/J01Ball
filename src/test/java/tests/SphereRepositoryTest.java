@@ -1,5 +1,6 @@
 package tests;
 
+import com.epam.task1.entity.Point;
 import com.epam.task1.entity.Sphere;
 import com.epam.task1.repository.Repository;
 import com.epam.task1.repository.Specification;
@@ -12,9 +13,8 @@ import org.mockito.Mockito;
 import java.util.List;
 
 public class SphereRepositoryTest {
-    private final static Sphere FIRST_SPHERE = new Sphere(5 , 3 ,4 ,-2);
+    private final static Sphere FIRST_SPHERE = new Sphere(5 , new Point(5,2,4));
     Repository<Sphere> repository = new SphereRepository();
-
     {
         repository.add(FIRST_SPHERE);
     }
@@ -23,7 +23,7 @@ public class SphereRepositoryTest {
     public void shouldFindByVolume(){
         Specification<Sphere> mock = Mockito.mock(Specification.class);
         //when
-        List<Sphere> actual =repository.findBy(new VolumeGreaterThanSpecification(1));
+        List<Sphere> actual =repository.query(new VolumeGreaterThanSpecification(1));
         //then
         Assert.assertEquals(1,actual.size());
         Sphere firstSphere = actual.get(0);

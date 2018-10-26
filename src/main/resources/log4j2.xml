@@ -6,7 +6,7 @@
                 <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
             </PatternLayout>
         </Console>
-        <File name="File" fileName="src/test/logs/log2.out" append="true">
+        <File name="File" fileName="target/logs/log.out" append="true">
             <PatternLayout>
                 <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
             </PatternLayout>

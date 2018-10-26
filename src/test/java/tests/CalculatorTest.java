@@ -1,21 +1,22 @@
 package tests;
 
+import com.epam.task1.entity.Point;
 import com.epam.task1.entity.Sphere;
-import com.epam.task1.CoordinatePlane;
+import com.epam.task1.logics.calculator.CoordinatePlane;
 import static org.junit.Assert.*;
-import com.epam.task1.geometry.SphereCalculator;
+import com.epam.task1.logics.calculator.SphereCalculator;
 import org.junit.Test;
 
-public class CalculatorTester {
-    private final SphereCalculator CALC = new SphereCalculator();
-    private final Sphere TEST_SPHERE = new Sphere(5,3,2,1);
+public class CalculatorTest {
+    private final Sphere TEST_SPHERE = new Sphere(5,new Point(3,2,1));
+    private final SphereCalculator calculator = new SphereCalculator();
 
     @Test
     public void ShouldReturnThreeHFourteenWhenRadiusFive(){
         //given
 
         //when
-        double actualArea = CALC.calculateSurfaceArea(TEST_SPHERE);
+        double actualArea = calculator.calculateSurfaceArea(TEST_SPHERE);
         //then
         assertEquals(314.159,actualArea,0.001);
     }
@@ -25,7 +26,7 @@ public class CalculatorTester {
         //given
 
         //when
-        double actualVolume = CALC.calculateVolume(TEST_SPHERE);
+        double actualVolume = calculator.calculateVolume(TEST_SPHERE);
         //then
         assertEquals(523.598,actualVolume,0.001);
     }
@@ -35,7 +36,7 @@ public class CalculatorTester {
         //give
 
         //when
-        double actualRatio = CALC.calculateVolumeRatio(TEST_SPHERE, CoordinatePlane.OXY);
+        double actualRatio = calculator.calculateVolumeRatio(TEST_SPHERE, CoordinatePlane.OXY);
         //then
         assertEquals(0.544,actualRatio,0.001);
     }

@@ -1,12 +1,12 @@
 package com.epam.task1.exceptions;
 
 public class SphereCreatingException extends Exception {
-    private double[] wrongSphereData;
-    public double[] getWrongSphereData(){
-        return wrongSphereData;
-    }
-    public SphereCreatingException(String message,double[] wrongSphereData){
-        super(message);
-        this.wrongSphereData=wrongSphereData;
+
+    public SphereCreatingException(String message,double[] wrongSphereData) {
+        super(message + "Wrong sphere data: ["+
+                        wrongSphereData[0]+";"+
+                        wrongSphereData[1]+";"+
+                        wrongSphereData[2]+";"+
+                        wrongSphereData[3]+"]");
     }
 }

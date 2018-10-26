@@ -1,14 +1,14 @@
 package com.epam.task1.entity;
 
-//TODO; .ctor gets central point and radius
-
 public class Sphere {
     private Point center;
     private double radius;
+    private long id;
 
-    public Sphere(double radius, double xCoordinate, double yCoordinate, double zCoordinate) {
-        center = new Point(xCoordinate,yCoordinate,zCoordinate);
+    public Sphere(double radius, Point center) {
         this.radius = radius;
+        this.center = center;
+
     }
 
     public double getXCoordinate() {
@@ -16,12 +16,10 @@ public class Sphere {
     }
 
     public double getYCoordinate() {
-
         return center.getYCoordinate();
     }
 
     public double getZCoordinate() {
-
         return center.getZCoordinate();
     }
 
@@ -35,6 +33,14 @@ public class Sphere {
 
     public void setCenter(Point center) {
         this.center = center;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     @Override

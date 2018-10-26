@@ -1,7 +1,7 @@
 package tests;
 
 import static org.junit.Assert.*;
-import com.epam.task1.geometry.SphereValidator;
+import com.epam.task1.logics.validator.SphereValidator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import com.tngtech.java.junit.dataprovider.DataProvider;
@@ -9,8 +9,8 @@ import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 
 @RunWith(DataProviderRunner.class)
-public class ValidatorTester {
-    private static final SphereValidator VALIDATOR = new SphereValidator();
+public class ValidatorTest {
+    private static final SphereValidator validator = new SphereValidator();
 
     @DataProvider
     public static Object[][] dataValidatorAdd() {
@@ -29,7 +29,7 @@ public class ValidatorTester {
         //given
 
         //when
-        boolean result = VALIDATOR.validate(line);
+        boolean result = validator.validate(line);
         //then
         assertEquals(expected, result);
     }

@@ -1,6 +1,5 @@
-package com.epam.task1.geometry;
+package com.epam.task1.logics.calculator;
 
-import com.epam.task1.CoordinatePlane;
 import com.epam.task1.entity.Sphere;
 
 public class SphereCalculator {
@@ -41,11 +40,13 @@ public class SphereCalculator {
         }
     }
 
-    public boolean isTouchedByPlane(Sphere sphere){
+    private boolean isTouchedByPlane(Sphere sphere){
         double xCoordinate = sphere.getXCoordinate();
         double yCoordinate = sphere.getYCoordinate();
         double zCoordinate = sphere.getZCoordinate();
         double radius = sphere.getRadius();
-        return ( radius>xCoordinate||radius>yCoordinate||radius>zCoordinate);
+        return ( radius>xCoordinate
+                ||radius>yCoordinate
+                ||radius>zCoordinate);
     }
 }

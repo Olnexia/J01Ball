@@ -12,14 +12,17 @@ public class Point {
     }
 
     public double getXCoordinate() {
+
         return xCoordinate;
     }
 
     public double getYCoordinate() {
+
         return yCoordinate;
     }
 
     public double getZCoordinate() {
+
         return zCoordinate;
     }
 

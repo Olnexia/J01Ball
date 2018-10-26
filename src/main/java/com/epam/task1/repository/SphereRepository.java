@@ -1,7 +1,6 @@
 package com.epam.task1.repository;
 
 import com.epam.task1.entity.Sphere;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +10,26 @@ public class SphereRepository implements Repository<Sphere>{
 
     private Map<Long,Sphere> data = new HashMap<>();
 
+    @Override
     public void add( Sphere object){
-        data.put(object.getId(),object);
+        long id = object.getId();
+        data.put(id,object);
     }
 
-    public List<Sphere> findBy(final Specification specification){
-        data.values().stream().
+    @Override
+    public void update( Sphere object){
+        long id = object.getId();
+        data.replace(id,object);
+    }
+
+    @Override
+    public void remove (Sphere object){
+        long id = object.getId();
+        data.remove(id);
+    }
+
+    public List<Sphere> query(Specification specification){
+        return data.values().stream().
                 filter(o->specification.specified(o))
                 .collect(Collectors.toList());
     }
