@@ -5,10 +5,10 @@ import com.epam.task1.entity.Sphere;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ObservableSphere extends Sphere implements Observable {
+public class SphereObservable extends Sphere implements Observable {
     private List<Observer> observers;
 
-    public ObservableSphere(double radius, Point center){
+    public SphereObservable(double radius, Point center){
         super(radius,center);
         observers= new ArrayList <>();
     }

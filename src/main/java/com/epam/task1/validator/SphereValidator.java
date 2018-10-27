@@ -1,4 +1,4 @@
-package com.epam.task1.logics.validator;
+package com.epam.task1.validator;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

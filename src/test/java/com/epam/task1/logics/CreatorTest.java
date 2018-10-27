@@ -1,9 +1,9 @@
-package tests;
+package com.epam.task1.logics;
 
 import com.epam.task1.entity.Point;
 import com.epam.task1.entity.Sphere;
 import com.epam.task1.exceptions.SphereCreatingException;
-import com.epam.task1.logics.creator.SphereCreator;
+import com.epam.task1.creator.SphereCreator;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;

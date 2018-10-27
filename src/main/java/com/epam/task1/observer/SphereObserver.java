@@ -1,23 +1,33 @@
 package com.epam.task1.observer;
 
 import com.epam.task1.entity.Sphere;
-import com.epam.task1.logics.calculator.CoordinatePlane;
-import com.epam.task1.logics.calculator.SphereCalculator;
+import com.epam.task1.calculator.CoordinatePlane;
+import com.epam.task1.calculator.SphereCalculator;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class SphereObserver implements Observer {
+    private static Observer instance = null;
+    private SphereCalculator calculator;
     private Map<Sphere, SphereData> sphereDataMap;
 
     public SphereObserver(){
         sphereDataMap = new HashMap <>();
+        calculator = new SphereCalculator();
+    }
+
+    public static Observer getObserver(){
+        if (instance == null) {
+            instance = new SphereObserver() {
+            };
+        }
+        return instance;
     }
 
     @Override
     public void update(Sphere sphere) {
         SphereData dataToUpdate = sphereDataMap.get(sphere);
-        SphereCalculator calculator = new SphereCalculator();
         double newSurfaceArea = calculator.calculateSurfaceArea(sphere);
         double newVolume = calculator.calculateVolume(sphere);
         double newRatioByOXY = calculator.calculateVolumeRatio(sphere, CoordinatePlane.OXY);

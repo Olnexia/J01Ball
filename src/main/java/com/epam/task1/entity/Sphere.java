@@ -1,9 +1,9 @@
 package com.epam.task1.entity;
 
-import com.epam.task1.logics.idgenerator.IdGenerator;
+import com.epam.task1.idgenerator.IdGenerator;
 
 public class Sphere {
-    private final static IdGenerator ID_GENERATOR = new IdGenerator();
+    private final static IdGenerator ID_GENERATOR = IdGenerator.getGenerator();
     private Point center;
     private double radius;
     private long id;

@@ -1,4 +1,4 @@
-package com.epam.task1.logics.calculator;
+package com.epam.task1.calculator;
 
 import com.epam.task1.entity.Sphere;
 

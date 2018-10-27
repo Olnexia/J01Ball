@@ -1,8 +1,8 @@
-package tests;
+package com.epam.task1.logics;
 
 import  static org.junit.Assert.*;
 import com.epam.task1.exceptions.FileReadingException;
-import com.epam.task1.logics.reader.FileReader;
+import com.epam.task1.reader.FileReader;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;

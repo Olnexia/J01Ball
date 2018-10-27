@@ -1,7 +1,7 @@
-package tests;
+package com.epam.task1.logics;
 
 import static org.junit.Assert.*;
-import com.epam.task1.logics.validator.SphereValidator;
+import com.epam.task1.validator.SphereValidator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import com.tngtech.java.junit.dataprovider.DataProvider;

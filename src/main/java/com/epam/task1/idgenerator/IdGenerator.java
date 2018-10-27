@@ -1,10 +1,19 @@
-package com.epam.task1.logics.idgenerator;
+package com.epam.task1.idgenerator;
 
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.util.UUID;
 
 public class IdGenerator {
+    private static IdGenerator instance = null;
+
+    public static IdGenerator getGenerator(){
+        if (instance == null) {
+            instance = new IdGenerator();
+        }
+        return instance;
+    }
+
     public long getId() {
         long value;
         do {

@@ -1,10 +1,10 @@
-package tests;
+package com.epam.task1.logics;
 
 import com.epam.task1.entity.Point;
 import com.epam.task1.entity.Sphere;
-import com.epam.task1.logics.calculator.CoordinatePlane;
+import com.epam.task1.calculator.CoordinatePlane;
 import static org.junit.Assert.*;
-import com.epam.task1.logics.calculator.SphereCalculator;
+import com.epam.task1.calculator.SphereCalculator;
 import org.junit.Test;
 
 public class CalculatorTest {
