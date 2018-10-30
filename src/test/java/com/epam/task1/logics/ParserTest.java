@@ -1,8 +1,8 @@
 package com.epam.task1.logics;
 
 import com.epam.task1.exceptions.SphereParsingException;
-import com.epam.task1.parser.SphereParser;
-import com.epam.task1.validator.SphereValidator;
+import com.epam.task1.logics.parser.SphereParser;
+import com.epam.task1.logics.validator.SphereValidator;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import static org.mockito.Mockito.*;
 public class ParserTest {
     private static final double DELTA = 0.001;
     private static  final SphereValidator MOCK = mock(SphereValidator.class);
-    {
+    static{
         when(MOCK.validate(any(String.class))).thenReturn(true);
     }
     private static final SphereParser parser = new SphereParser(MOCK);

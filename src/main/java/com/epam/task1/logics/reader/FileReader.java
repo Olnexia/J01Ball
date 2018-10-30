@@ -1,4 +1,4 @@
-package com.epam.task1.reader;
+package com.epam.task1.logics.reader;
 
 import com.epam.task1.exceptions.FileReadingException;
 

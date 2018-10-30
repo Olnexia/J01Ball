@@ -1,6 +1,7 @@
-package com.epam.task1.repository;
+package com.epam.task1.repository.specifications;
 
 import com.epam.task1.entity.Sphere;
+import com.epam.task1.repository.Specification;
 
 public class IdSpecification implements Specification<Sphere> {
     private long id;

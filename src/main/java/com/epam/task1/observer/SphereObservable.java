@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SphereObservable extends Sphere implements Observable {
-    private List<Observer> observers;
+    private List<Observer> observers = new ArrayList <>();
 
     public SphereObservable(double radius, Point center){
         super(radius,center);
-        observers= new ArrayList <>();
     }
 
     @Override
@@ -21,7 +20,10 @@ public class SphereObservable extends Sphere implements Observable {
 
     @Override
     public void registerObserver(Observer observer) {
-        observers.add(observer);
+        if(!observers.contains(observer)) {
+            observers.add(observer);
+            observer.update(this);
+        }
     }
 
     @Override
@@ -34,5 +36,9 @@ public class SphereObservable extends Sphere implements Observable {
         for(Observer observer : observers){
             observer.update(this);
         }
+    }
+
+    public List <Observer> getObservers() {
+        return observers;
     }
 }

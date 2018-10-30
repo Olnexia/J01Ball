@@ -1,6 +1,7 @@
-package com.epam.task1.calculator;
+package com.epam.task1.logics.calculator;
 
 import com.epam.task1.entity.Sphere;
+import com.epam.task1.logics.calculator.CoordinatePlane;
 
 public class SphereCalculator {
 

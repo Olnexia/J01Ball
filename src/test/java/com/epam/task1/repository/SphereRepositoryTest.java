@@ -30,6 +30,4 @@ public class SphereRepositoryTest {
         Sphere firstSphere = actual.get(0);
         Assert.assertEquals(FIRST_TEST_SPHERE,firstSphere);
     }
-
-
 }

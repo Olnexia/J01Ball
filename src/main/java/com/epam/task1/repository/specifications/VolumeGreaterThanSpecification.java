@@ -1,7 +1,8 @@
-package com.epam.task1.repository;
+package com.epam.task1.repository.specifications;
 
 import com.epam.task1.entity.Sphere;
-import com.epam.task1.calculator.SphereCalculator;
+import com.epam.task1.logics.calculator.SphereCalculator;
+import com.epam.task1.repository.Specification;
 
 public class VolumeGreaterThanSpecification implements Specification<Sphere> {
     private double volume;

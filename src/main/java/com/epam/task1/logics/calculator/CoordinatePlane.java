@@ -1,4 +1,4 @@
-package com.epam.task1.calculator;
+package com.epam.task1.logics.calculator;
 
 public enum CoordinatePlane {
     OXY,

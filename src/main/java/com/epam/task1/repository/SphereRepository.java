@@ -1,9 +1,7 @@
 package com.epam.task1.repository;
 
 import com.epam.task1.entity.Sphere;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SphereRepository implements Repository<Sphere>{
@@ -25,9 +23,8 @@ public class SphereRepository implements Repository<Sphere>{
     @Override
     public void remove (Sphere object){
         long id = object.getId();
-        if(data.containsKey(id)){
-            data.remove(id);
-        }
+        data.remove(id);
+
     }
 
     public List<Sphere> query(Specification specification){

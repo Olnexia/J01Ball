@@ -1,4 +1,4 @@
-package com.epam.task1.idgenerator;
+package com.epam.task1.logics.idgenerator;
 
 import java.math.BigInteger;
 import java.nio.ByteBuffer;

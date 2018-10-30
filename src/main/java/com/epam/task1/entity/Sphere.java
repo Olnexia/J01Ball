@@ -1,6 +1,6 @@
 package com.epam.task1.entity;
 
-import com.epam.task1.idgenerator.IdGenerator;
+import com.epam.task1.logics.idgenerator.IdGenerator;
 
 public class Sphere {
     private final static IdGenerator ID_GENERATOR = IdGenerator.getGenerator();
@@ -27,7 +27,6 @@ public class Sphere {
     }
 
     public double getRadius() {
-
         return radius;
     }
 
@@ -59,11 +58,12 @@ public class Sphere {
     }
 
     @Override
-    public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("Center: "+center);
-        sb.append(" radius: "+radius);
-        return sb.toString();
+    public String toString() {
+        return  "Sphere{" +
+                "center=" + center +
+                "; radius=" + radius +
+                "; id=" + id +
+                '}';
     }
 
     @Override

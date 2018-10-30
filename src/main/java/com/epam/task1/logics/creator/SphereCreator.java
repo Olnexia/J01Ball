@@ -1,4 +1,4 @@
-package com.epam.task1.creator;
+package com.epam.task1.logics.creator;
 
 import com.epam.task1.entity.Point;
 import com.epam.task1.entity.Sphere;

@@ -34,13 +34,11 @@ public class Point {
     }
 
     @Override
-    public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("point ["+xCoordinate);
-        sb.append(";"+yCoordinate);
-        sb.append(";"+zCoordinate);
-        sb.append("]");
-        return sb.toString();
+    public String toString() {
+        return  "Point{"+ xCoordinate +
+                "; " + yCoordinate +
+                "; " + zCoordinate +
+                '}';
     }
 
     @Override

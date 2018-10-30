@@ -1,10 +1,10 @@
-package com.epam.task1.parser;
+package com.epam.task1.logics.parser;
 
 import com.epam.task1.exceptions.SphereParsingException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.epam.task1.validator.Validator;
+import com.epam.task1.logics.validator.Validator;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 

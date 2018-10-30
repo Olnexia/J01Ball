@@ -3,7 +3,7 @@ package com.epam.task1.comparators;
 import com.epam.task1.entity.Sphere;
 import java.util.Comparator;
 
-public class IdComprator implements Comparator<Sphere> {
+public class IdComparator implements Comparator<Sphere> {
 
     @Override
     public int compare(Sphere o1, Sphere o2) {
