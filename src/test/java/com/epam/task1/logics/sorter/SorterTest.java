@@ -1,4 +1,4 @@
-package com.epam.task1.sorter;
+package com.epam.task1.logics.sorter;
 
 import com.epam.task1.entity.Point;
 import com.epam.task1.entity.Sphere;

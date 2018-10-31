@@ -1,4 +1,4 @@
-package com.epam.task1.sorter;
+package com.epam.task1.logics.sorter;
 
 public enum OrderBy {
     ID,
