@@ -13,8 +13,8 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 public class SphereRepositoryTest {
-    private final static Sphere FIRST_TEST_SPHERE = new Sphere(5 , new Point(5,2,4));
-    private final static long TEST_ID = 42L;
+    private static final Sphere FIRST_TEST_SPHERE = new Sphere(5 , new Point(5,2,4));
+    private static final long TEST_ID = 42L;
     private Repository<Sphere> repository = new SphereRepository();
     {
         FIRST_TEST_SPHERE.setId(TEST_ID);

@@ -7,7 +7,8 @@ public class SphereData {
     private final double volumeRatioByOXZ;
     private final double volumeRatioByOYZ;
 
-    public SphereData(double surfaceArea, double volume, double volumeRatioByOXY, double volumeRatioByOXZ, double volumeRatioByOYZ) {
+    public SphereData(double surfaceArea, double volume, double volumeRatioByOXY,
+                      double volumeRatioByOXZ, double volumeRatioByOYZ) {
         this.surfaceArea = surfaceArea;
         this.volume = volume;
         this.volumeRatioByOXY = volumeRatioByOXY;

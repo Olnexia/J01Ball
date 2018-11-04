@@ -1,18 +1,16 @@
 package com.epam.geometry.logics.parser;
 
 import com.epam.geometry.exceptions.SphereParsingException;
-import com.epam.geometry.logics.parser.SphereParser;
 import com.epam.geometry.logics.validator.SphereValidator;
+import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
-import static org.junit.Assert.*;
-import static org.junit.Assert.fail;
 import static org.mockito.Mockito.*;
 
 public class ParserTest {
     private static final double DELTA = 0.001;
-    private static  final SphereValidator MOCK = mock(SphereValidator.class);
+    private static final SphereValidator MOCK = mock(SphereValidator.class);
     static{
         when(MOCK.validate(any(String.class))).thenReturn(true);
     }
@@ -29,7 +27,7 @@ public class ParserTest {
         //when
         double[] actualSphereData = parser.parseSphere(expectedStringData);
         //then
-        assertArrayEquals(FIRST_TEST_DATA, actualSphereData,DELTA);
+        Assert.assertArrayEquals(FIRST_TEST_DATA, actualSphereData,DELTA);
     }
 
     @Test
@@ -43,14 +41,14 @@ public class ParserTest {
         //when
         List <double[]> actualSphereDataList = parser.parseSpheres(expectedStringDataList);
         //then
-        assertEquals(4,actualSphereDataList.size());
+        Assert.assertEquals(4,actualSphereDataList.size());
         double[] firstActualData = actualSphereDataList.get(0);
-        assertArrayEquals(FIRST_TEST_DATA,firstActualData,DELTA);
+        Assert.assertArrayEquals(FIRST_TEST_DATA,firstActualData,DELTA);
         double[] secondActualData = actualSphereDataList.get(1);
-        assertArrayEquals(SECOND_TEST_DATA,secondActualData,DELTA);
+        Assert.assertArrayEquals(SECOND_TEST_DATA,secondActualData,DELTA);
         double[] thirdActualData = actualSphereDataList.get(2);
-        assertArrayEquals(THIRD_TEST_DATA,thirdActualData,DELTA);
+        Assert.assertArrayEquals(THIRD_TEST_DATA,thirdActualData,DELTA);
         double[] fourthActualData = actualSphereDataList.get(3);
-        assertArrayEquals(FOURTH_TEST_DATA,fourthActualData,DELTA);
+        Assert.assertArrayEquals(FOURTH_TEST_DATA,fourthActualData,DELTA);
     }
 }

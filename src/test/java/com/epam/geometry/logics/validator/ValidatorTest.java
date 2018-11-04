@@ -1,7 +1,6 @@
 package com.epam.geometry.logics.validator;
 
-import static org.junit.Assert.*;
-import com.epam.geometry.logics.validator.SphereValidator;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import com.tngtech.java.junit.dataprovider.DataProvider;
@@ -31,6 +30,6 @@ public class ValidatorTest {
         //when
         boolean result = validator.validate(line);
         //then
-        assertEquals(expected, result);
+        Assert.assertEquals(expected, result);
     }
 }

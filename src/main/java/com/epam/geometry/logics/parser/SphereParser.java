@@ -3,7 +3,6 @@ package com.epam.geometry.logics.parser;
 import com.epam.geometry.exceptions.SphereParsingException;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.epam.geometry.logics.validator.Validator;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -24,8 +23,7 @@ public class SphereParser {
             try {
                 double[] sphereData = parseSphere(line);
                 validSphereData.add(sphereData);
-            }
-            catch (SphereParsingException e){
+            } catch (SphereParsingException e){
                 logger.warn("An exception occurred while parsing the line" + line);
             }
         }

@@ -5,10 +5,10 @@ import com.epam.geometry.entity.Sphere;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.assertEquals;
 @RunWith(DataProviderRunner.class)
 public class ComparatorsTest {
     private static final Sphere FIRST_TEST_SPHERE = new Sphere(5,new Point(3,2,9));
@@ -44,7 +44,7 @@ public class ComparatorsTest {
         //when
         int result = idComparator.compare(firstSphere,secondSphere);
         //then
-        assertEquals(expected, result);
+        Assert.assertEquals(expected, result);
     }
 
     @Test
@@ -55,7 +55,7 @@ public class ComparatorsTest {
         //when
         int result = radiusComparator.compare(firstSphere,secondSphere);
         //then
-        assertEquals(expected, result);
+        Assert.assertEquals(expected, result);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class ComparatorsTest {
         //when
         int result = xComparator.compare(firstSphere,secondSphere);
         //then
-        assertEquals(expected, result);
+        Assert.assertEquals(expected, result);
     }
 
     @Test
@@ -77,7 +77,7 @@ public class ComparatorsTest {
         //when
         int result = yComparator.compare(firstSphere,secondSphere);
         //then
-        assertEquals(expected, result);
+        Assert.assertEquals(expected, result);
     }
 
     @Test
@@ -88,6 +88,6 @@ public class ComparatorsTest {
         //when
         int result = zComparator.compare(firstSphere,secondSphere);
         //then
-        assertEquals(expected, result);
+        Assert.assertEquals(expected, result);
     }
 }

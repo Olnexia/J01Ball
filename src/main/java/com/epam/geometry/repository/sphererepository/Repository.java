@@ -1,7 +1,6 @@
 package com.epam.geometry.repository.sphererepository;
 
 import com.epam.geometry.repository.specification.Specification;
-
 import java.util.List;
 
 public interface Repository<T> {

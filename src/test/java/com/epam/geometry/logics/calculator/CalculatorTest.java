@@ -2,11 +2,7 @@ package com.epam.geometry.logics.calculator;
 
 import com.epam.geometry.entity.Point;
 import com.epam.geometry.entity.Sphere;
-
-import static org.junit.Assert.*;
-
-import com.epam.geometry.logics.calculator.CoordinatePlane;
-import com.epam.geometry.logics.calculator.SphereCalculator;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class CalculatorTest {
@@ -21,7 +17,7 @@ public class CalculatorTest {
         //when
         double actualArea = calculator.calculateSurfaceArea(TEST_SPHERE);
         //then
-        assertEquals(314.159,actualArea,DELTA);
+        Assert.assertEquals(314.159,actualArea,DELTA);
     }
 
     @Test
@@ -31,7 +27,7 @@ public class CalculatorTest {
         //when
         double actualVolume = calculator.calculateVolume(TEST_SPHERE);
         //then
-        assertEquals(523.598,actualVolume,DELTA);
+        Assert.assertEquals(523.598,actualVolume,DELTA);
     }
 
     @Test
@@ -41,6 +37,6 @@ public class CalculatorTest {
         //when
         double actualRatio = calculator.calculateVolumeRatio(TEST_SPHERE, CoordinatePlane.OXY);
         //then
-        assertEquals(0.544,actualRatio,DELTA);
+        Assert.assertEquals(0.544,actualRatio,DELTA);
     }
 }

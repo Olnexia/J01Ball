@@ -3,7 +3,7 @@ package com.epam.geometry.entity;
 import com.epam.geometry.logics.idgenerator.IdGenerator;
 
 public class Sphere {
-    private final static IdGenerator ID_GENERATOR = IdGenerator.getGenerator();
+    private static final IdGenerator ID_GENERATOR = IdGenerator.getGenerator();
     private Point center;
     private double radius;
     private long id;

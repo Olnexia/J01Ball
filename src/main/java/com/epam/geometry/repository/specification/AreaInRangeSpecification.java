@@ -14,8 +14,8 @@ public class AreaInRangeSpecification implements Specification<Sphere> {
     }
 
     @Override
-    public boolean specified(Sphere object) {
-        double surfaceArea = CALCULATOR.calculateSurfaceArea(object);
+    public boolean specified(Sphere sphere) {
+        double surfaceArea = CALCULATOR.calculateSurfaceArea(sphere);
         return ((surfaceArea>=start) && (surfaceArea<=end));
     }
 }

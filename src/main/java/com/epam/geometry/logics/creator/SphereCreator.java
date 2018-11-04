@@ -5,15 +5,14 @@ import com.epam.geometry.entity.Sphere;
 import com.epam.geometry.exceptions.SphereCreatingException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 public class SphereCreator {
-    private final int RADIUS_INDEX = 0;
-    private final int X_INDEX = 1;
-    private final int Y_INDEX = 2;
-    private final int Z_INDEX = 3;
+    private static final int RADIUS_INDEX = 0;
+    private static final int X_INDEX = 1;
+    private static final int Y_INDEX = 2;
+    private static final int Z_INDEX = 3;
     private static final Logger logger = LogManager.getLogger(SphereCreator.class);
 
     public List<Sphere> createSpheres(List<double[]> sphereDataList){

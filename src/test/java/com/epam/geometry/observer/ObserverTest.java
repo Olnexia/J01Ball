@@ -6,9 +6,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ObserverTest {
-    private final static SphereObservable TEST_SPHERE_OBSERVABLE = new SphereObservable(5,new Point(4,5,2));
-    private final static SphereObserver OBSERVER = SphereObserver.getObserver();
-    private final static double DELTA = 0.001;
+    private static final SphereObservable TEST_SPHERE_OBSERVABLE = new SphereObservable(5,new Point(4,5,2));
+    private static final SphereObserver OBSERVER = SphereObserver.getObserver();
+    private static final double DELTA = 0.001;
 
     @Test
     public void shouldAddCorrectSphereDataToObserver(){

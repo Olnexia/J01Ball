@@ -12,10 +12,10 @@ import java.util.List;
 
 public class SphereRepositoryIT {
 
-    private final static Sphere FIRST_TEST_SPHERE = new Sphere(5 , new Point(5,2,4));
-    private final static Sphere SECOND_TEST_SPHERE = new Sphere(3, new Point( 5,2,4));
-    private final static long TEST_ID = 42L;
-    private final static long NONEXISTENT_ID = 14L;
+    private static final Sphere FIRST_TEST_SPHERE = new Sphere(5 , new Point(5,2,4));
+    private static final Sphere SECOND_TEST_SPHERE = new Sphere(3, new Point( 5,2,4));
+    private static final long TEST_ID = 42L;
+    private static final long NONEXISTENT_ID = 14L;
     private Repository<Sphere> repository = new SphereRepository();
     {
         FIRST_TEST_SPHERE.setId(TEST_ID);

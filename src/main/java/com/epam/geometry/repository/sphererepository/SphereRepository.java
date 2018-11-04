@@ -18,14 +18,12 @@ public class SphereRepository implements Repository<Sphere> {
     public void update( Sphere sphere){
         long id = sphere.getId();
         data.replace(id,sphere);
-
     }
 
     @Override
     public void remove (Sphere sphere){
         long id = sphere.getId();
         data.remove(id);
-
     }
 
     public List<Sphere> query(Specification specification){

@@ -3,11 +3,10 @@ package com.epam.geometry.logics.creator;
 import com.epam.geometry.entity.Point;
 import com.epam.geometry.entity.Sphere;
 import com.epam.geometry.exceptions.SphereCreatingException;
-import com.epam.geometry.logics.creator.SphereCreator;
+import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
-import static org.junit.Assert.*;
 
 public class CreatorTest {
     private static final Sphere FIRST_TEST_SPHERE = new Sphere(1.0,new Point( 2.0, 3.0, -4.0));
@@ -23,7 +22,7 @@ public class CreatorTest {
         //when
         Sphere actualSphere = creator.createSphere(expectedSphereData);
         //then
-        assertEquals(FIRST_TEST_SPHERE, actualSphere);
+        Assert.assertEquals(FIRST_TEST_SPHERE, actualSphere);
     }
 
     @Test(expected = SphereCreatingException.class)
@@ -46,14 +45,14 @@ public class CreatorTest {
         //when
         List<Sphere> actualSphereList = creator.createSpheres(expectedSphereDataList);
         //then
-        assertEquals(4,actualSphereList.size());
+        Assert.assertEquals(4,actualSphereList.size());
         Sphere firstActualSphere = actualSphereList.get(0);
-        assertEquals(FIRST_TEST_SPHERE,firstActualSphere);
+        Assert.assertEquals(FIRST_TEST_SPHERE,firstActualSphere);
         Sphere secondActualSphere = actualSphereList.get(1);
-        assertEquals(SECOND_TEST_SPHERE,secondActualSphere);
+        Assert.assertEquals(SECOND_TEST_SPHERE,secondActualSphere);
         Sphere thirdActualSphere = actualSphereList.get(2);
-        assertEquals(THIRD_TEST_SPHERE,thirdActualSphere);
+        Assert.assertEquals(THIRD_TEST_SPHERE,thirdActualSphere);
         Sphere fourthActualSphere = actualSphereList.get(3);
-        assertEquals(FOURTH_TEST_SPHERE,fourthActualSphere);
+        Assert.assertEquals(FOURTH_TEST_SPHERE,fourthActualSphere);
         }
 }
